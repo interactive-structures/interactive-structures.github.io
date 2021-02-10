@@ -1,0 +1,17 @@
+{%- assign this = include.context -%}
+
+<!-- loop through all optional links and create buttons-->
+{% if this.external-urls.size > 0 %}
+    {% assign n = this.external-urls.size | minus: 1 %}
+    {% for i in (0..n) %}
+
+    {% assign linktype = "link-type-" | append: this.external-types[i] %}
+    {% assign link = this.external-urls[i] %}
+        <a class="link_button" 
+           href="{% include article/get-assets-link.html content=link %}">
+           <ion-icon name="{% include article/get-link-icons.html content=linktype %}"></ion-icon>
+        {{ this.external-names[i] }}
+    </a>
+
+    {% endfor %}
+{% endif %}

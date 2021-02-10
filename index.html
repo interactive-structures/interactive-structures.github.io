@@ -1,0 +1,39 @@
+---
+layout: default
+
+selected_publications:
+  - 2021-05-developable-metamaterials.html
+  - 2019-05-understanding-mm.html
+  - 2017-05-digital-mm.html
+  - 2016-10-metamaterial-mechanisms.html
+---
+
+	
+{% include teaser.html %}
+
+
+<!-- this shows the section "NEWS" -->
+<!-- the news items are defined as a collection -->
+
+{% if site.news.size > 0 %}
+
+<div class="container">
+	<div class="row">
+		<div class="col col-12">
+			<h4 class="separator-title"><span style="background: white; padding: 0 10px;">news</span></h4>
+			<!-- include something ? -->
+		</div>
+	</div>
+</div>
+
+{% endif %}
+
+
+
+<!-- show "SELECTED PUBLICATIONS" -->
+<!-- the publications to show are defined in the front matter above by their *file name* -->
+{% include selected-publications.html %}
+
+
+<!-- **or** show "RECENT PUBLICATIONS" -->
+<!-- {% comment %} {% include recent-publications.html N=5 %} {% endcomment %} -->

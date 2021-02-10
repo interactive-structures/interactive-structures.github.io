@@ -1,0 +1,137 @@
+---
+layout: default
+---
+
+
+<div class="container">
+  <div class="post-title-box">
+  <div class="row">
+    <!-- <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0"> -->
+      <div class="col col-8 col-t-10 col-m-12">
+
+        {% assign title = page.title %}
+        {% if page.page-title %}
+          {% assign title = page.page-title %}
+        {% endif %}
+        
+        <h1 class="post-title">{{ title | escape }}</h1>
+        <p>
+          {{ page.authors | join: ", " | escape }}
+        </p>
+
+          <!-- {% if page.tags.size >= 1 %}
+          <div class="post__tags">
+            {% for tag in page.tags %}
+              <a href="{{ site.baseurl }}/tag/{{ tag }}" class="post__tags-tag">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% endif %} -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+
+  {% assign no-image = nil %}
+  {% if page.image %}
+    <div class="post__head">
+      <img class="post-image" src="{{site.baseurl}}{{site.assetsurl}}{{page.url}}{{page.image}}"/>
+    </div>
+  {% else %}
+    {% assign no-image = 'post-no-image' %}
+  {% endif %}
+
+</div>
+
+
+  <div class="container">
+  <div class="row">
+    <!-- begin post -->
+    <article class="post {{ no-image }} col col-8 col-t-10 col-m-12">
+
+      {% if page.page-subtitle %}
+        <p> <strong>{{ page.page-subtitle }}</strong> </p>
+      {% endif %}
+
+      <div class="post__content">
+        {{ content }}
+
+
+
+
+        <!-- Add the publication data -->
+        <h2>Publication</h2>
+
+        <p class="tight">
+          {{ page.authors | join: ", " | escape }}. {{ page.year }}. {{ page.title |escape }}. {{ page.venue | escape }}. DOI: {{ page.doi }}
+        </p>
+
+        {% if page.awards %}
+        <p class="tight">
+          <span class="awards highlight_text"><ion-icon name="trophy-sharp"></ion-icon> {{ page.awards  | join: ", " }} </span>
+        </p>
+        {% endif %}
+
+
+        {% assign pdf-start = page.pdf | slice: 0, 4 %}
+        {% assign pdf = page.pdf | prepend: page.url | prepend: site.assetsurl | prepend: site.baseurl %}
+
+        {% if pdf-start == "http" %}
+          {% assign pdf = page.pdf %}
+        {% endif %} 
+
+        <a class="link_button" href="{{pdf}}">
+          <ion-icon name="{% include article/get-link-icons.html content='link-type-document' %}"></ion-icon>
+          &nbsp;paper
+        </a>
+        <a class="link_button" href="{{page.doi}}">
+          <ion-icon name="{% include article/get-link-icons.html content='link-type-doi' %}"></ion-icon>
+          &nbsp;doi
+        </a>
+
+        
+
+        <!-- Embed all external links, if applicable -->
+        {% if page.external-urls.size > 0 %}
+        <h2>Links and materials</h2>
+
+        <div class="article__links">      
+          {% include article/add-external-links.html context=page %}
+        </div>
+        {% endif %}
+
+
+        
+        <!-- Embedd all videos -->
+        {% if page.video or page.video-preview %}
+
+        <h2>Video</h2>
+        
+        <div class="col-12">
+
+          {% if page.video %}
+            <h3>full video</h3>
+            <iframe  width="320" height="180" allowfullscreen frameborder="0" scrolling="no" 
+            src="{% include article/get-video-url.html link=page.video embed=true %}"
+            ></iframe>
+          {% endif %}
+
+          {% if page.video-preview %}
+            <h3>30 sec preview</h3>
+            <iframe  width="320" height="180" allowfullscreen frameborder="0" scrolling="no" 
+            src="{% include article/get-video-url.html link=page.video-preview embed=true %}"
+            ></iframe>
+          {% endif %}
+
+        </div>
+        {% endif %}
+      
+
+        <!-- TODO: add media coverage -->
+
+
+      </div>
+
+    </article>
+    <!-- end post -->
+    </div>
+  </div>

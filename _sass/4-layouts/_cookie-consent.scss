@@ -1,0 +1,35 @@
+#cookie-notice {
+    /* padding: 0.5rem 1rem;  */
+    padding: $base-spacing-unit;
+    display: none; 
+    text-align: center; 
+    position: fixed; 
+    bottom: 0; 
+    right: $base-spacing-unit*2;
+    z-index: 100000;
+    /* width: calc(100% - 2rem);  */
+    width: 20%;
+    background: $dark; 
+    color: $white;
+    // border: 5px solid $brand-color;
+}
+#cookie-notice a {
+    display: inline-block; 
+    cursor: pointer; 
+    /* margin-left: 0.5rem; */
+    padding: 0 10px;
+    border: 1px solid $white;
+    color: $dark;
+    background-color: $light-gray;
+}
+@media (max-width: $tablet) {
+    #cookie-notice span {
+        display: block; 
+        padding-top: 3px; 
+        margin-bottom: $base-spacing-unit*3;
+    }
+    #cookie-notice a {
+        position: relative; 
+        bottom: 4px;
+    }
+}

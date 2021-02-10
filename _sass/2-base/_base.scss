@@ -1,0 +1,244 @@
+html {
+  margin-left: calc(100vw - 100%);
+  overflow: auto;
+}
+
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+main.content {
+  min-height: calc(100vh - (#{$nav-height} + #{$footer-height} + 1px));
+  display: block;
+  position: relative;
+  margin-bottom: 80px;
+ } 
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+
+// ------ TEXT ------
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $base-line-height;
+  text-align: justify;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  input, textarea {
+		border: 1px solid $border-color;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: #e02f40;
+		}
+		&:required:valid {
+			border-color: #34a74e;
+		}
+	}
+}
+
+::placeholder {
+	color: #666;
+}
+
+*::selection {
+  color: $white;
+  background-color: $dark;
+}
+
+blockquote {
+  margin: 30px -100px;
+  font-size: 28px;
+  line-height: 45px;
+  letter-spacing: 0.5px;
+  font-style: normal;
+  text-align: center;
+  
+  @media only screen and (max-width: $tablet) {
+    margin: 30px 0;
+    font-size: 24px;
+    line-height: 38px;
+  }
+}
+
+pre {
+  overflow: auto;
+  padding: 15px;
+  margin-bottom: 0;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+p.tight {
+  margin-bottom: 6px;
+}
+
+.highlight_text {
+  background-color: lighten($brand-color, 20%);
+  padding: 1px 10px;
+  font-weight: 400;
+}
+
+
+// ------ HEADERS ------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  line-height: initial;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: $font-size-h1;
+  margin-top:    $font-size-h1*1.5;
+  margin-bottom: $font-size-h1*0.5;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: $font-size-h2;
+  margin-top:    $font-size-h2*1.5;
+  margin-bottom: $font-size-h2*0.5;
+
+}
+
+h3 {
+  font-weight: 300;
+  font-size: $font-size-h3;
+  text-transform: uppercase;
+  margin-top:    $font-size-h3*1.5;
+  margin-bottom: $font-size-h3*0.5;
+}
+
+h4 {
+  font-family: $base-font-family;
+  font-weight: 700;
+  font-size: $font-size-h4;
+  margin-bottom: $font-size-h4*0.5;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: $font-size-h5;
+  margin-bottom: $font-size-h5*0.5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+  margin-bottom: $font-size-h6*0.5;
+}
+
+.separator-title {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 0px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+  border-bottom: solid $border-color 1.5px;
+}
+
+img,
+.zoom-img-wrap {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  &+em {
+    text-align: center;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
+
+// ------ LINKS ------
+
+a {
+  text-decoration: none;
+  color: $text-color;
+  transition: $global-transition;
+  border-bottom: solid 1px transparent;
+  &:hover {
+    color: $black;
+    border-bottom: solid 1px $black;
+  }
+}
+
+a.muted_link {
+  color: $text-color;
+  padding-bottom: 0.5px;
+  border: none;
+  &:hover {
+    border-bottom: solid 2px $link-color;
+  }
+}
+
+a.underlined_link {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  padding: 0 0px;
+  transition: color ease 0.1s;
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: $link-color;
+    transition: all ease 0.3s;
+  }
+  
+  &:hover {
+    &::after {
+      height: 100%;
+      background-color: lighten($color: $link-color, $amount: 42%);
+    }
+  }
+}
+
+
+hr {
+  display: block;
+  height: 1px;
+  margin: 40px 0;
+  border: 0;
+  background: $light-gray;
+}
+
+ul.dash_list {
+  list-style-type: none;
+}
+
+ul.dash_list li:before {
+  content: '\2013';
+  position: absolute;
+  margin-left: -$base-spacing-unit;
+}

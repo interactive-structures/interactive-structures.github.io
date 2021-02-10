@@ -1,0 +1,83 @@
+// *****************
+// Global Variables
+// *****************
+
+// Spaces
+$base-spacing-unit: 20px;
+
+// Border radius
+$global-radius: 0px;
+
+// Transition
+$global-transition: all 0.1s;
+// $global-transition: all .35s;
+
+// Height of the Menu Header
+$nav-height: 100px;
+$footer-height: 120px;
+
+
+// *****************
+// Color Variables
+// *****************
+// $brand-color: #f6b141; //gold
+$brand-color: #00B0F0; //blue
+// $brand-color: #92D050; //green
+// $brand-color: #FFFF00;
+// $dark: #393e46;
+$dark: #333333;
+$gray: #9b9b9b;
+// $light-gray: #e6eef0;
+$light-gray: #eeeeee;
+$white: #ffffff;
+$black: #000000;
+
+// Background Colors
+$background-color: $white;
+
+// Body Color
+$text-color: $dark;
+
+// Headings
+$heading-font-color: $dark;
+
+// Links
+$link-color: $brand-color;
+// $link-color-hover: darken($dark, 15%);
+
+// Button
+$button-color: $white;
+$button-background-color: $dark;
+
+// Border
+$border-color: $light-gray;
+$light-background-color: lighten($color: $light-gray, $amount: 4.5%);
+
+
+
+// *****************
+// Typography
+// *****************
+$base-font-size: 16px;
+$base-font-style: normal;
+$base-font-variant: normal;
+$base-font-weight: normal;
+$base-font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+$base-line-height: 26px;
+
+// Headings
+$heading-font-weight: 700;
+$heading-font-family: 'Roboto Condensed', Helvetica Neue, Helvetica, Arial, sans-serif;
+
+$font-size-h1:  28px;
+$font-size-h2:  22px;
+$font-size-h3:  18px;
+$font-size-h4:  16px;
+$font-size-h5:  16px;
+$font-size-h6:  16px;
+
+$heading-line-height: 1.2;
+
+.font-small {
+    font-size: $base-font-size*0.8;    
+}

@@ -1,0 +1,20 @@
+get-articles-by-name.html<br>
+
+include.selected: {{ include.selected.size }}<br>
+
+
+{%- assign publications = site.publications | sort: "year" | reverse -%}
+{%- assign include.selected_items = "" -%}
+
+{%- for selected-name in include.selected -%}
+	<br>{{selected-name}}<br><br>
+	{%- for item in publications -%}
+		{%- assign name = item.path | split:"/" | last | split:"." | first -%}
+		{{name}}<br>
+
+        {%- if name == selected-name -%}
+            {%- assign selected_items = selected_items | append: item -%}
+			{%- break -%}
+		{%- endif -%}
+	{%- endfor -%}
+{%- endfor -%}

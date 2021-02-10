@@ -1,0 +1,43 @@
+
+<!-- this shows the section "SELECTED PUBLICATIONS" -->
+<!-- the publications to show are defined in the front matter in index.html by their *file name* -->
+
+<!-- selected_publications: {{ page.selected_publications.size }}<br> -->
+
+{% if page.selected_publications.size > 0 %}
+
+{% assign publications = site.publications | sort: "publication-date" | reverse %}
+
+<div class="container">
+	<div class="row">
+	<div class="col col-12">
+	
+	<h4 class="separator-title"><span style="background: white; padding: 0 10px;">selected publications</span></h4>
+	
+	<article class="page col col-10 col-t-10 col-m-12">
+		<div class="page__content">
+			
+			See <a class="underlined_link" href="/publications"><strong>all publications</strong></a>.
+			<br/><br/>
+	
+
+			{% for selected-name in page.selected_publications %}
+				{% for article in publications %}
+					{% assign name = article.path | split:"/" | last %}
+
+					{% if name == selected-name %}
+						{% include article-list.html %}
+						{% break %}
+					{% endif %}
+
+				{% endfor %}
+			{% endfor %}
+
+		</div>
+	</article>
+
+</div>
+</div>
+</div>
+
+{% endif %}

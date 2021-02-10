@@ -1,0 +1,17 @@
+- name: Home
+  link: /
+- name: Research
+  link: /publications.html
+- name: Team
+  link: /team.html
+- name: Work with us 
+  link: /join.html
+- name: Contact 
+  link: /contact.html
+
+# Home | Research | Team | Work with us 
+# Vision | Research | Team | Work with us | Courses 
+
+
+# https://morphingmatter.cs.cmu.edu/team/
+# https://hcie.csail.mit.edu/

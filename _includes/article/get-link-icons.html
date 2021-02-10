@@ -1,0 +1,26 @@
+{%- assign key = include.content -%}
+{%- assign iconname = " " -%}
+
+{%- case key -%}
+    {%- when "link-type-document" -%}
+        {%- assign iconname = 'document-text-sharp' -%}
+    {%- when "link-type-video" -%}
+        {%- assign iconname = 'play-circle-sharp' -%}
+    {%- when "link-type-doi" -%}
+        {%- assign iconname = 'library-sharp' -%}
+    {%- when "link-type-link" -%}
+        {%- assign iconname = 'link-sharp' -%}
+    {%- when "link-type-download" -%}
+        {%- assign iconname = 'download-sharp' -%}
+    {%- when "link-type-code" -%}
+        {%- assign iconname = 'terminal-sharp' -%}
+    {%- when "link-type-git-code" -%}
+        {%- assign iconname = 'logo-github' -%}
+    {%- when "link-type-deploy" -%}
+        {%- assign iconname = 'desktop-sharp' -%}
+    {%- else -%}
+        {%- assign iconname = '' -%}
+{%- endcase -%}
+
+{%- assign iconname = iconname | strip -%}
+{{ iconname }}
