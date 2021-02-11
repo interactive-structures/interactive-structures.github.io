@@ -11,6 +11,8 @@ https://github.com/vwochnik/jekyll-email-protect#:~:text=Jekyll%20Email%20Protec
 install using
 $ gem install jekyll-email-protect
 
+[Linking A Custom Domain To Github Pages](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)
+
 * * *
 * * *
 * * *
