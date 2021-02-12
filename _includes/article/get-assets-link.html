@@ -1,9 +1,18 @@
 {%- assign input = include.content -%}
 
-{%- assign thisurl = page.url -%}
-{%- if page.url contains "html" -%}
-  {%- assign thisurl = article.url -%}
-{%- endif -%}
+{%- comment -%}
+  assets link to: {{include.content}} // 
+  page.url: {{page.url}} // 
+  article.url: {{article.url}} // 
+
+  {%- assign thisurl = page.url -%}
+  {%- if page.url contains "html" -%}
+    {%- assign thisurl = article.url -%}
+  {%- endif -%}
+{%- endcomment -%}
+
+
+{%- assign thisurl = article.url -%}
 
 {%- assign output = input | prepend: thisurl | prepend: site.assetsurl | prepend: site.baseurl -%}
 {%- if input contains "http" -%}
