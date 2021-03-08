@@ -12,7 +12,10 @@ install using
 $ gem install jekyll-email-protect
 
 [Linking A Custom Domain To Github Pages](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)
+[Direkt links to google drive](https://www.labnol.org/internet/direct-links-for-google-drive/28356/)
+[Link to PDF from gdoc](https://eduk8.me/2016/06/link-google-doc-view-pdf-browser/#:~:text=Go%20to%20Sharing%20on%20the,of%20others%20finding%20your%20document.&text=Now%20the%20document%20opens%20up%20as%20a%20PDF%20in%20the%20browser.)
 
+use "title"-tag for <a> for accessibility
 * * *
 * * *
 * * *
