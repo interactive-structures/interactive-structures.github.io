@@ -14,7 +14,7 @@ roles:
 
 
 <p>
-  <a class="underlined_link" href="/join.html"><strong>Join the group!</strong></a> If you are interested in joining the group, please get in touch.
+  <a class="underlined_link" href="/join.html">Join the group!</a> If you are interested in joining the group, please get in touch.
 </p>
 
 
@@ -55,10 +55,10 @@ roles:
               <!-- <a class="team__contact muted_link" href="mailto:{{ person.email | encode_email }}">{{ person.email }}</a> -->
               
               {% if person.website %}
-              <a class="team__contact muted_link" href="{{ person.website }}">web</a> 
+              <a class="team__contact" href="{{ person.website }}">web</a> 
               &nbsp; | &nbsp; 
               {% endif %}
-              <a class="team__contact muted_link" href="mailto:{{ person.email | encode_email }}">email</a>
+              <a class="team__contact" href="mailto:{{ person.email | encode_email }}">email</a>
               
             </div>
           </div>

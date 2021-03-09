@@ -73,6 +73,11 @@
 	margin: 0;
 }
 
+.no-space-after {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
 // Lists Reset
 .list-reset {
 	@include list-reset();

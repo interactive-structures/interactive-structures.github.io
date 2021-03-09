@@ -1,8 +1,7 @@
 .teaser {
   padding: 60px 20px;
-  // background: lighten($light-gray 1%);
   background-color: $light-background-color;
-  // margin-bottom: 80px;
+  z-index: -2;
   margin-left: -20px;
   padding-left: 40px;
 

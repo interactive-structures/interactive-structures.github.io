@@ -51,7 +51,7 @@
     border: none;
 
     &:hover {
-      opacity: 70%;
+      // opacity: 70%;
       font-weight: 700;
       letter-spacing: -0.25px;
       transition: all 0.3s ease;
@@ -109,13 +109,21 @@
         font-weight: 700;
         letter-spacing: 0.5px;
         text-transform: uppercase;
-        color: lighten($dark, 15%);
+        // color: lighten($dark, 15%);
+        color: $dark;
         border: none;
 
         &:hover {
           color: $black;
           border: none;
         }
+        &:active {
+          color: $black;
+          border: none;
+        }
+      }
+      .nav__link-active {
+        color: $black;
       }
     }
   }
@@ -146,7 +154,7 @@
       padding-left: 30px;
       padding-bottom: 7px;
       margin-bottom: 10px;
-      color: $gray;
+      // color: $gray;
       border-bottom: 1px solid $light-gray;
     }
 
@@ -166,6 +174,7 @@
   font-size: 21px;
   
   .nav__icon {
+    // color: lighten($dark, 15%);
     color: $dark;
     cursor: pointer;
     &:hover {
