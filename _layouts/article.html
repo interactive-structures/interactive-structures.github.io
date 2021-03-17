@@ -59,7 +59,9 @@ layout: default
 
 
         <!-- Add the publication data -->
-        <h2>Publication</h2>
+        <a href="#publication">
+        <h2 id="publication">Publication</h2>
+        </a>
 
         <p class="tight">
           {{ page.authors | join: ", " | escape }}. {{ page.year }}. {{ page.title |escape }}. {{ page.venue | escape }}. DOI: {{ page.doi }}
@@ -92,7 +94,9 @@ layout: default
 
         <!-- Embed all external links, if applicable -->
         {% if page.external-urls.size > 0 %}
-        <h2>Links and materials</h2>
+        <a href="#materials">
+        <h2 id="materials">Links and materials</h2>
+        </a>
 
         <div class="article__links">      
           {% include article/add-external-links.html context=page %}
@@ -104,8 +108,10 @@ layout: default
         <!-- Embedd all videos -->
         {% if page.video or page.video-preview %}
 
-        <h2>Video</h2>
-        
+        <a href="#video">
+        <h2 id="video">Video</h2>
+        </a>
+
         <div class="col-12">
 
           {% if page.video %}

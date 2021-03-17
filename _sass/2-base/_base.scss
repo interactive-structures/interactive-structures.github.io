@@ -105,6 +105,7 @@ h6 {
 h1 {
   font-weight: 700;
   font-size: $font-size-h1;
+  text-transform: uppercase;
   margin-top:    $font-size-h1*1.5;
   margin-bottom: $font-size-h1*0.5;
 }
@@ -179,10 +180,10 @@ a {
   text-decoration: none;
   color: $text-color;
   transition: $global-transition;
-  border-bottom: solid 1px $border-color;
+  border-bottom: solid 1px $gray;
   &:hover {
     color: $black;
-    border-color: $black;
+    border-bottom: solid 1px $black;
   }
   &:active {
     color: $black;
