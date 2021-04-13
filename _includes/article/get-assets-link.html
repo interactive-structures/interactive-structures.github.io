@@ -5,14 +5,15 @@
   page.url: {{page.url}} // 
   article.url: {{article.url}} // 
 
-  {%- assign thisurl = page.url -%}
-  {%- if page.url contains "html" -%}
-    {%- assign thisurl = article.url -%}
-  {%- endif -%}
+  {%- assign thisurl = article.url -%}
 {%- endcomment -%}
 
 
-{%- assign thisurl = article.url -%}
+{%- assign thisurl = page.url -%}
+{%- if page.url contains "html" -%}
+  {%- assign thisurl = article.url -%}
+{%- endif -%}
+  
 
 {%- assign output = input | prepend: thisurl | prepend: site.assetsurl | prepend: site.baseurl -%}
 {%- if input contains "http" -%}

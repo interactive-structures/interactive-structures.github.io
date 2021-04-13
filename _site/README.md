@@ -5,6 +5,10 @@
 **!!! update this readme !!!**
 
 
+run using
+bundle exec jekyll serve --trace
+
+
 Notes: 
 
 https://github.com/vwochnik/jekyll-email-protect#:~:text=Jekyll%20Email%20Protect%20is%20an,email%20address%20from%20spam%20bots.

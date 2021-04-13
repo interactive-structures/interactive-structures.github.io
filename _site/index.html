@@ -252,7 +252,7 @@
 
           <div class="article__links">
               <a class="link_button" 
-                 href="/assets//publications/2021-05-developable-metamaterials/paper.pdf
+                 href="/assets//paper.pdf
 ">
                  <ion-icon name="document-text-sharp"></ion-icon>
                  &nbsp;paper
@@ -359,7 +359,7 @@
 
           <div class="article__links">
               <a class="link_button" 
-                 href="/assets//publications/2019-05-understanding-mm/paper.pdf
+                 href="/assets//paper.pdf
 ">
                  <ion-icon name="document-text-sharp"></ion-icon>
                  &nbsp;paper
@@ -472,7 +472,7 @@
 
           <div class="article__links">
               <a class="link_button" 
-                 href="/assets//publications/2017-05-digital-mm/2017CHI-Digital-mechanical-metamaterials-authors-copy.pdf
+                 href="/assets//2017CHI-Digital-mechanical-metamaterials-authors-copy.pdf
 ">
                  <ion-icon name="document-text-sharp"></ion-icon>
                  &nbsp;paper
@@ -594,7 +594,7 @@
 
           <div class="article__links">
               <a class="link_button" 
-                 href="/assets//publications/2016-10-metamaterial-mechanisms/2016UIST-Metamaterial-Mechanisms-authors-copy.pdf
+                 href="/assets//2016UIST-Metamaterial-Mechanisms-authors-copy.pdf
 ">
                  <ion-icon name="document-text-sharp"></ion-icon>
                  &nbsp;paper
@@ -739,7 +739,7 @@
     </div>
     
     <div class="copyright font-small">
-      Last update: 17 Mar 2021   |   Powered by <a href="https://jekyllrb.com/">Jekyll</a>. Design based on <a href="https://github.com/artemsheludko/zolan">Zolan template</a>.
+      Last update: 12 Apr 2021   |   Powered by <a href="https://jekyllrb.com/">Jekyll</a>. Design based on <a href="https://github.com/artemsheludko/zolan">Zolan template</a>.
     </div>
 </div>
 </footer>
@@ -765,51 +765,9 @@
 <script src="/js/vendors/jquery.fitvids.js"></script>
 <script src="/js/common.js"></script>
 <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-  <div id="cookie-notice">
-    <span>This website would like to use google analytics and their associated cookies and scripts.</span>
-    <br/><br/>
-    <a id="cookie-notice-accept" class="link_button btn btn-primary btn-sm">Accept</a> &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://www.cmu.edu/legal/" target="_blank" class="link_button btn btn-primary btn-sm">More info</a>
-    <br/><br/>
-</div>
+  
+  
 
-<script>
-
-    function createCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
-    function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-        }
-        return null;
-    }
-    function eraseCookie(name) {
-        createCookie(name,"",-1);
-    }
-
-    if(readCookie('cookie-notice-dismissed')=='true') {
-        
-    } else {
-        document.getElementById('cookie-notice').style.display = 'block';
-    }
-    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-        createCookie('cookie-notice-dismissed','true',31);
-        document.getElementById('cookie-notice').style.display = 'none';
-        location.reload();
-    });
-
-</script>
 </body>
 
 </html>
