@@ -4,6 +4,9 @@
 
 **!!! update this readme !!!**
 
+Semi-automatic deployment: 
+the contents of the "_site" folder are automatically copied to the gh-pages branch, which is what is visible on the web. 
+This means you have to compile the website locally before pushing to github. 
 
 run using
 bundle exec jekyll serve --trace
