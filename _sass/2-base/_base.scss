@@ -83,7 +83,8 @@ p.tight {
 }
 
 .highlight_text {
-  background-color: lighten($brand-color, 20%);
+  // background-color: lighten($brand-color, 20%);
+  background-color: $brand-color;
   padding: 1px 10px;
   font-weight: 400;
 }
@@ -235,7 +236,8 @@ a.underlined_link {
   &:hover {
     &::after {
       height: 100%;
-      background-color: lighten($color: $link-color, $amount: 42%);
+      background-color: $link-color;
+      // background-color: lighten($color: $link-color, $amount: 42%);
     }
   }
 }

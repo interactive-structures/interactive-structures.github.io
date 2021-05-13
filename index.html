@@ -21,7 +21,25 @@ selected_publications:
 	<div class="row">
 		<div class="col col-12">
 			<h4 class="separator-title"><span style="background: white; padding: 0 10px;">news</span></h4>
-			<!-- include something ? -->
+			
+			{% for item in site.news %}
+			<div class="page col col-10 col-t-10 col-m-12">
+				<div class="page__content" style="padding-bottom: 20px;">
+		
+
+				<!-- <div class="container">
+					<div class="post-title-box">
+					<div class="row">
+						<div class="col col-10 col-t-10 col-m-12"> -->
+							{{item.content}}
+						<!-- </div>
+					</div>
+					</div>
+				</div> -->
+
+				</div>
+			</div>
+			{% endfor %}
 		</div>
 	</div>
 </div>
