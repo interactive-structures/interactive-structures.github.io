@@ -46,16 +46,17 @@
     font-family: 'Roboto Condensed', 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 300;
-    color: $black;
     text-decoration: none;
+    color: $text-color;
     border: none;
 
     &:hover {
-      // opacity: 70%;
-      font-weight: 700;
-      letter-spacing: -0.25px;
-      transition: all 0.3s ease;
-      border: none;
+      span {
+      transition: all ease 0.2s;
+      // border-bottom: solid 2px $link-color;
+      background-color: $link-color;
+      padding-bottom: 3px;
+      }
     }
     
     // @media only screen and (max-width: $tablet) {
