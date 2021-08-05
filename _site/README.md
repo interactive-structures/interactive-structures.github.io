@@ -25,7 +25,7 @@ To update the website on https://interactive-structures.org/, you need to
 
 # How to add conent
 
-- Adding people to the team page: 
+- Adding people to the team page: [instructions](./_people/README.md)
 - Adding news items: *todo*
 - Adding publications: *todo*
 - Set which publications are displayed on the home page: *todo*
