@@ -1,6 +1,48 @@
 
+# How to install, run, deploy
 
-# TODO
+## Install dependencies
+
+1. Install **Jekyll** on your local machine: https://jekyllrb.com/docs/installation/
+2. Install the website dependencies by navigating to the theme directory and running `bundle install`
+3. To run it locally, use `bundle exec jekyll serve --trace` to start the Jekyll server.
+
+### Troubleshooting
+The issues should be resolved as the Gemfile was updated appropriately, but just as notes:
+- On Windows: [gem wdm issue](https://stackoverflow.com/questions/32723710/add-line-of-code-to-gemfile-that-already-contains-that-line-of-code)
+- Add webrick for Ruby 3.0: [issue](https://github.com/jekyll/jekyll/issues/8523)
+
+
+## Deployment
+
+To update the website on https://interactive-structures.org/, you need to 
+1. Run it locally using use `bundle exec jekyll serve`, which will update the `_site` folder
+2. *Verify that you didn't break anything* at http://127.0.0.1:4000/
+3. Push to the main branch, that's it.
+
+(Backround: Pushing to the main branch will trigger an [Action](https://github.com/interactive-structures/interactive-structures.github.io/blob/main/.github/workflows/deploy.yml) on github that copies the `_site` folder to the `gh-branch`, which is the content visible at https://interactive-structures.org/)
+
+
+# How to add conent
+
+- Adding people to the team page: 
+- Adding news items: *todo*
+- Adding publications: *todo*
+- Set which publications are displayed on the home page: *todo*
+
+
+# Licence
+*todo*
+
+
+# Acknowledgements
+Zolan template
+CMU DIG
+
+
+* * *
+
+# Notes
 
 **!!! update this readme !!!**
 
@@ -22,7 +64,10 @@ $ gem install jekyll-email-protect
 [Direkt links to google drive](https://www.labnol.org/internet/direct-links-for-google-drive/28356/)
 [Link to PDF from gdoc](https://eduk8.me/2016/06/link-google-doc-view-pdf-browser/#:~:text=Go%20to%20Sharing%20on%20the,of%20others%20finding%20your%20document.&text=Now%20the%20document%20opens%20up%20as%20a%20PDF%20in%20the%20browser.)
 
-use "title"-tag for <a> for accessibility
+use "title"-tag for `<a>` for accessibility
+
+
+
 * * *
 * * *
 * * *
