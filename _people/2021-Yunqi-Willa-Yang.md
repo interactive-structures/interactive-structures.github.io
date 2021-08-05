@@ -1,8 +1,8 @@
 ---
 name: Yunqi "Willa" Yang
-position: Masters Student
+role: Masters student
+position: Masters student
 email: yunqiy@andrew.cmu.edu
 website: https://willayang.com/
-role: Masters Student
-image: /people/Yunqi-Willa-Yang.jpg
+image: /people/2021-Yunqi-Willa-Yang.jpg
 ---
