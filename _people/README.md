@@ -2,7 +2,8 @@
 
 1. Filenames have the structure `YYYY-Firstname-Lastname`. The year is the year you started in the lab. Example: `2021-Alexandra-Ion.md`. Make sure that the filename is *unique*.
 
-2. Add a photo of yourself as **.jpg** in the folder `/assets/people/`. The aspect ratio is **square** and with min. 400 px. Use the filename above, i.e., `YYYY-Firstname-Lastname.jpg`
+2. Add a photo of yourself as in the folder `/assets/people/`. The aspect ratio is **square** and with min. 400 px. Use the filename above, i.e., `YYYY-Firstname-Lastname.[jpg|png]`. 
+For busy backgrounds, run your photo through the a background remover tool (e.g., https://www.remove.bg/) and use a neutral background image, or `#dadada` as the background color.
 
 3. Create a new `*.md` in `/_people/`. Use the filename above, i.e., `YYYY-Firstname-Lastname.md`
 
@@ -17,7 +18,7 @@ position: ...
 department: ...
 email: ...
 website: ...
-image: /people/YYYY-Firstname-Lastname.jpg --> add the real filename here 
+image: /people/YYYY-Firstname-Lastname.[jpg|png] --> add the real filename here 
 ---
 ```
 

@@ -1,9 +1,9 @@
 ---
-name: Luke Darcy
+name: Dunmin "Victor" Zhu
 role: Undergraduate student
 position: Undergraduate student
 department: Computer Science
-email: ldarcy@andrew.cmu.edu
+email: zhudunmin@gmail.com
 website: 
-image: 
+image: /people/2021-Dunmin-Zhu.png
 ---

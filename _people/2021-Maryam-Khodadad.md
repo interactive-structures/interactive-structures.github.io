@@ -2,6 +2,9 @@
 name: Maryam Khodadad
 role: PhD student
 position: PhD student
-email: mkhodada@andrew.cmu.edu
+department: Civil Engineering
 co-advisor: Kaushik Dayal
+email: mkhodada@andrew.cmu.edu
+website: 
+image: 
 ---
