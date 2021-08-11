@@ -1,0 +1,38 @@
+<div class="col col-3 col-t-4 col-m-6">
+    <div class="team">
+    
+      {% if person.image %}
+        <img src="{{ site.assetsurl }}{{ person.image | relative_url }}" alt="Picture of {{ person.name }}" class="team__photo" />
+      {% else %}
+      <div class="team__photo"><div class="team__photo_empty">
+          <ion-icon class="team__photo_icon" name="person-circle-sharp"></ion-icon>
+        </div></div>
+      {% endif %}
+      
+      <div class="team__name">{{ person.name }}</div>
+      <!-- {% if person.website %}
+        <a class="team__name muted_link" href="{{ person.website }}">{{ person.name }}</a>
+      {% else %}
+        <div class="team__name">{{ person.name }}</div>
+      {% endif %} -->
+
+      <div>{{ person.position }}</div>
+
+      {% if person.co-advisor %}
+        <!-- <div class="font-small"> -->
+          co-advised w/ {{ person.co-advisor }}
+        <!-- </div> -->
+      {% endif %}
+
+      <!-- <a class="team__contact muted_link" href="mailto:{{ person.email | encode_email }}">{{ person.email }}</a> -->
+      
+      {% if person.website %}
+        <a class="team__contact" href="{{ person.website }}">web</a> 
+      &nbsp; | &nbsp; 
+      {% endif %}
+      {% if person.email %}
+        <a class="team__contact" href="mailto:{{ person.email | encode_email }}">email</a>
+      {% endif %}
+      
+    </div>
+  </div>
