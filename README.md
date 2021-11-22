@@ -17,7 +17,7 @@ The issues should be resolved as the Gemfile was updated appropriately, but just
 
 To update the website on https://interactive-structures.org/, you need to 
 1. Run it locally using use `bundle exec jekyll serve`, which will update the `_site` folder
-2. *Verify that you didn't break anything* at http://127.0.0.1:4000/
+2. **Verify that you didn't break anything** at http://127.0.0.1:4000/
 3. Push to the main branch, that's it.
 
 (Backround: Pushing to the main branch will trigger an [Action](https://github.com/interactive-structures/interactive-structures.github.io/blob/main/.github/workflows/deploy.yml) on github that copies the `_site` folder to the `gh-branch`, which is the content visible at https://interactive-structures.org/)
@@ -26,7 +26,7 @@ To update the website on https://interactive-structures.org/, you need to
 # How to add conent
 
 - Adding people to the team page: [instructions](./_people/README.md)
-- Adding news items: *todo*
+- Adding news items: [instructions](./_news/README.md)
 - Adding publications: *todo*
 - Set which publications are displayed on the home page: *todo*
 
@@ -36,210 +36,27 @@ To update the website on https://interactive-structures.org/, you need to
 
 
 # Acknowledgements
-Zolan template
-CMU DIG
 
-
-* * *
-
-# Notes
-
-**!!! update this readme !!!**
-
-Semi-automatic deployment: 
-the contents of the "_site" folder are automatically copied to the gh-pages branch, which is what is visible on the web. 
-This means you have to compile the website locally before pushing to github. 
-
-run using
-bundle exec jekyll serve --trace
-
-
-Notes: 
-
-https://github.com/vwochnik/jekyll-email-protect#:~:text=Jekyll%20Email%20Protect%20is%20an,email%20address%20from%20spam%20bots.
-install using
-$ gem install jekyll-email-protect
-
-[Linking A Custom Domain To Github Pages](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)
-[Direkt links to google drive](https://www.labnol.org/internet/direct-links-for-google-drive/28356/)
-[Link to PDF from gdoc](https://eduk8.me/2016/06/link-google-doc-view-pdf-browser/#:~:text=Go%20to%20Sharing%20on%20the,of%20others%20finding%20your%20document.&text=Now%20the%20document%20opens%20up%20as%20a%20PDF%20in%20the%20browser.)
-
-use "title"-tag for `<a>` for accessibility
-
-
-
-* * *
-* * *
-* * *
-
-
-Zolan - Modern & Minimal Theme for Jekyll
-======
-Zolan is a minimal blog theme for Jekyll.
-
-* * *
-
-Table of Contents
------------------
-*   [Features](#features)
-*   [Demo](#demo)
-*   [Deployment](#deployment)
-*   [Posts](#posts)
-*   [Disqus Comments](#DisqusComments)
-*   [Instagram](#instagram)
-*   [Google Analytics](#GoogleAnalytics)
-*   [Update favicon](#UpdateFavicon)
-*   [Credits](#Credits)
-*   [Support](#Support)
-
-* * *
-
-### Features
-
-* 100% responsive and clean theme
-
-* Optimized for mobile devices
-
-* Minimal design
-
-* Valid HTML5 code
-
-* Post sharing
-
-* Subscription form
-
-* Supports Disqus Comments
-
-* Instagram Feed
-
-* Ionicons Icons
-
-* Google Fonts
-
-
-* * *
-
-### Demo
-
-Check the theme in action [Demo](https://zolan-jekyll.netlify.app/)
-
-![Main page preview](https://github.com/artemsheludko/zolan/blob/master/images/zolan-main-page.png?raw=true)
-
-The post page would look like this:
-
-![Post page preview](https://github.com/artemsheludko/zolan/blob/master/images/zolan-post.png?raw=true)
-
-* * *
-
-### Deployment
-
-To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
-
-I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
-
-* * *
-
-### Posts
-
-To create a new post, you can create a new markdown file inside the \_posts directory by following the [recommended file structure](https://jekyllrb.com/docs/posts/#creating-post-files).
-
-      ---
-      layout: post
-      title: Time to give gifts to everyone
-      date: 2018-08-23 16:04:00 +0300
-      image: 03.jpg
-      tags: Life
-      ---
-
-
-You can set the tags and the post image.
-
-Add post images to **/images/** directory.
-
-For tags, try to not add space between two words, for example, `Ruby on Rails`, could be something like (`ruby-on-rails`, `Ruby_on_Rails`, or `Ruby-on-Rails`).
-
-* * *
-
-### Disqus Comments
-
-Zolan Theme comes with Disqus comments enabled.
-
-Open `_data/settings.yml` file, and change the `mr-brown` value on line 26 with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
-
-      Comment Section (Disqus)
-      disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
-
-
-That’s all you need to setup Disqus from the theme side. If you get any issue regarding that comments are unable to load. First, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide).
-
-And also check [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22) if you still have issues.
-
-* * *
-
-### Instagram
-
-The Instagram feed is working using [Instafeed.js](http://instafeedjs.com/) to show the photos.
-
-First, you will need to get your account `userId` and `accessToken` from the following URLs:
-
-*   userId: [http://codeofaninja.com/tools/find-instagram-user-id/](http://codeofaninja.com/tools/find-instagram-user-id/)
-*   accessToken: [instagram.pixelunion.net](http://instagram.pixelunion.net/)
-
-Second, open the `js/common.js` file and replace the `userId` and `accessToken` values.
-
-    var instagramFeed = new Instafeed({
-          get: 'user',
-          limit: 6,
-          resolution: 'standard_resolution',
-          userId: '8987997106',
-          accessToken: '8987997106.924f677.8555ecbd52584f41b9b22ec1a16dafb9',
-          template: ''
-    });
-
-
-Third, open the `_data/settings.yml` file and replace the `instafeed: false` on `instafeed: true` value.
-
-    # Instagram Feed
-    instafeed: false # To enable the instafeed, use the value true. To turn off use the value false.
-
-
-* * *
-
-### Google Analytics
-
-To integrate Google Analytics, open `_data/settings.yml`, and add your Google Analytics identifier.
-
-    # Google Analytics
-    google-analytics: # Add your identifier. For example UA-99631805-1
-
-
-* * *
-
-### Update favicon
-
-You can find the current favicon (favicon.ico) inside the theme root directory, just replace it with your new favicon.
-
-* * *
+This website is an adapted version of the [Zolan blog template](https://zolan-jekyll.netlify.app/) and inspired by the [CMU Data Interaction Group template](https://dig.cmu.edu/).
 
 ### Credits
 
-I have used the following scripts, fonts or other files as listed.
+Based on the Zolan template, we use the following scripts, fonts or other files as listed.
 
 *   [Google Fonts](https://fonts.google.com/specimen/Nunito) (Roboto, Sans Serif).
 *   [Ionicons Icons](https://ionicons.com/)
 *   [FitVids.js](http://fitvidsjs.com/)
-*   [Medium’s Image Zoom](https://github.com/fat/zoom.js)
-*   [Instafeed.js](http://instafeedjs.com/)
-*   [jQuery.com](https://jquery.com/)
-*   Preview Images form [unsplash.com](https://unsplash.com/), [pexels.com](https://www.pexels.com/)
 
-* * *
-### License
-
-Mit License
+In addition, we use
+* [Jekyll Email Protect](https://github.com/vwochnik/jekyll-email-protect)
 
 * * *
 
-### Support
-<p>If you like the themes that I create you can become my sponsor on <a href="https://www.patreon.com/artemsheludko" target="_blank">Patreon</a>.
-<p align="center"><b>Thank you for your support ❤️</b></p>
+# Other Notes
+
+[Linking A Custom Domain To Github Pages](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)
+
+[Direkt links to google drive](https://www.labnol.org/internet/direct-links-for-google-drive/28356/)
+
+[Link to PDF from gdoc](https://eduk8.me/2016/06/link-google-doc-view-pdf-browser/#:~:text=Go%20to%20Sharing%20on%20the,of%20others%20finding%20your%20document.&text=Now%20the%20document%20opens%20up%20as%20a%20PDF%20in%20the%20browser.)
+
