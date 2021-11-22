@@ -13,32 +13,22 @@ selected_publications:
 
 
 <!-- this shows the section "NEWS" -->
-<!-- the news items are defined as a collection -->
+<!-- the news items are defined as a collection, their visibility can be set in each individual item, newest item is displayed first -->
 
-{% if site.news.size > 0 %}
+{% assign visible_news = site.news | where: "visible", "true" | sort: "date" | reverse %}
+{% if visible_news.size > 0 %}
 
 <div class="container">
 	<div class="row">
 		<div class="col col-12">
 			<h4 class="separator-title"><span style="background: white; padding: 0 10px;">news</span></h4>
 			
-			{% for item in site.news %}
-			<div class="page col col-10 col-t-10 col-m-12">
-				<div class="page__content" style="padding-bottom: 20px;">
-		
-
-				<!-- <div class="container">
-					<div class="post-title-box">
-					<div class="row">
-						<div class="col col-10 col-t-10 col-m-12"> -->
-							{{item.content}}
-						<!-- </div>
+			{% for item in visible_news %}
+				<div class="page col col-10 col-t-10 col-m-12">
+					<div class="page__content" style="padding-bottom: 20px;">
+						{{item.content}}
 					</div>
-					</div>
-				</div> -->
-
 				</div>
-			</div>
 			{% endfor %}
 		</div>
 	</div>
