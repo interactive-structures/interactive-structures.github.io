@@ -1,10 +1,9 @@
 ---
-name: Maryam Khodadad
+name: Hatice Gokcen Guner
 role: PhD student
 position: PhD student
 department: Civil and Environmental Engineering
-email: mkhodada@andrew.cmu.edu
+email: gokcenguner@cmu.edu
 website: 
-image: 
+image: /people/2021-Hatice-Gokcen-Guner.jpg
 ---
-co-advisor: Kaushik Dayal

@@ -6,4 +6,5 @@ department: Computer Science and Applied Mathematics
 email: jerrycao99@gmail.com
 website: https://jerrycao22.github.io/
 image: /people/2021-Jerry-Cao.png
+alumni_since: 2021
 ---

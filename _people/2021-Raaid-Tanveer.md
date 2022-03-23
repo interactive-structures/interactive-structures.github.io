@@ -6,4 +6,5 @@ department: School of Computer Science
 email: rtanveer@andrew.cmu.edu
 website: https://raaidrt.github.io/portfolio/
 image: /people/2021-Raaid-Tanveer.jpg
+alumni_since: 2021
 ---

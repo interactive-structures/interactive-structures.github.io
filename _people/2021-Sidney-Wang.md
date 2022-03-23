@@ -6,4 +6,5 @@ department: Electrical and Computer Engineering
 email: sidneyw@andrew.cmu.edu
 website: 
 image: /people/2021-Sidney-Wang.png
+alumni_since: 2021
 ---

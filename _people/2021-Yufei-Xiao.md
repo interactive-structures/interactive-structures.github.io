@@ -6,4 +6,5 @@ department: Computational Science
 email: yufei.xiao@minerva.kgi.edu
 website: https://yufeixiao.github.io/
 image: /people/2021-Yufei-Xiao.jpg
+alumni_since: 2021
 ---
