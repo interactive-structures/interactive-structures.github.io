@@ -6,4 +6,5 @@ department: Human-Computer Interaction Institute
 email: jtgonzal@cs.cmu.edu
 website: https://gonzalez.ink
 image: /people/2021-Jesse-Gonzalez.jpg
+year_start: 2021
 ---

@@ -6,4 +6,5 @@ department: Architecture
 email: yumengzh@andrew.cmu.edu
 website: http://yumengzhuang.com
 image: /people/2022-Yumeng-Zhuang.jpg
+year_start: 2022
 ---

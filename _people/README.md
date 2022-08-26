@@ -18,17 +18,18 @@ position: ...
 department: ...
 email: ...
 website: ...
-image: /people/YYYY-Firstname-Lastname.[jpg|png] --> add the real filename here, it's case sensitive
+image: /people/YYYY-Firstname-Lastname.[jpg|png] --> add the real filename here, incl. its file extension, this is case sensitive
+year_start: YYYY
 ---
 ```
 
 
 - **name:** The name to display, e.g., Alexandra Ion, Yunqi "Willa" Yang
-- **role:** This field is used for sorting. Use of the following roles verbatim:   
+- **role:** This field is used for sorting. Use of the following roles **verbatim**:   
     - Professor
     - Admin
     - PhD student
-    - Visiting PhD student
+    - Research assistant
     - Masters student
     - Undergraduate student
     - Collaborator
@@ -38,5 +39,6 @@ image: /people/YYYY-Firstname-Lastname.[jpg|png] --> add the real filename here,
 - **email:** Your email such that people can reach out to you. We use an email protection library.
 - **website:** Your website, if applicable.
 - **image:** The path to the photo file, relative to the root folder of this repository (i.e. to index.html)
+- **year_start:** The year that you joined the group
 
 - *alumni_since:* Once someone leaves the group, add `alumni_since: YYYY` to mark them as alumni.
