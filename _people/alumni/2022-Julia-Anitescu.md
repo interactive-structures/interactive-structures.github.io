@@ -7,4 +7,5 @@ email: janitesc@andrew.cmu.edu
 website: 
 image: /people/2022-Julia-Anitescu.jpg
 year_start: 2022
+alumni_since: 2022
 ---

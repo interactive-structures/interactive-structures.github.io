@@ -7,4 +7,5 @@ email: traegran@andrew.cmu.edu
 website: www.tuckerrae-grant.com
 image: /people/2022-Tucker-Rae-Grant.jpg
 year_start: 2022
+alumni_since: 2022
 ---

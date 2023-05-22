@@ -1,7 +1,7 @@
 ---
 name: Violet Han
-role: Masters student
-position: Masters student
+role: PhD student
+position: PhD student
 department: School of Architecture
 email: yinuoh@andrew.cmu.edu
 website: https://violethan.com/About
