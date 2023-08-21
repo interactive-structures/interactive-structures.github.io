@@ -64,7 +64,10 @@ layout: default
         </a>
 
         <p class="tight">
-          {{ page.authors | join: ", " | escape }}. {{ page.year }}. {{ page.title |escape }}. {{ page.venue | escape }}. DOI: {{ page.doi }}
+          {{ page.authors | join: ", " | escape }}. {{ page.publication-date | date: '%Y' }}. {{ page.title |escape }}. {{ page.venue | escape }}. 
+          {% if page.doi %}
+            DOI: {{ page.doi }}
+          {% endif %}
         </p>
 
         {% if page.awards %}
@@ -81,14 +84,18 @@ layout: default
           {% assign pdf = page.pdf %}
         {% endif %} 
 
+        {% if page.pdf %}
         <a class="link_button" href="{{pdf}}">
           <ion-icon name="{% include article/get-link-icons.html content='link-type-document' %}"></ion-icon>
           &nbsp;paper
         </a>
+        {% endif %} 
+        {% if page.doi %}
         <a class="link_button" href="{{page.doi}}">
           <ion-icon name="{% include article/get-link-icons.html content='link-type-doi' %}"></ion-icon>
           &nbsp;doi
         </a>
+        {% endif %} 
 
         
 
