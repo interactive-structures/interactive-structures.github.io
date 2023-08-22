@@ -2,10 +2,10 @@
 
 ## Create the html file + assets folder
 
-`KEY` of a submission should be `YYYY-MM-TITLE` where title is a short key for your paper. Year and month should be the **conference date**, not the upload date.
+`<KEY>` of a submission should be `YYYY-MM-TITLE` where title is a short key for your paper. Year and month should be the **conference date**, not the upload date.
 
-1. Create a new `KEY.html` file in the `_publications` directory. 
-2. And create a folder named `KEY` in `/assets/publications/KEY` which will contain all files for this publication.
+1. Create a new `<KEY>.html` file in the `_publications` directory. 
+2. And create a folder named `<KEY>` in `/assets/publications/<KEY>` which will contain all files for this publication.
 3. Add all files to this directory, this is where
 4. Upload all videos to the **lab youtube account**
 
@@ -19,6 +19,7 @@ date: YYYY-MM-DD
 title: "..."
 authors:
   - ...
+  - ...
 venue: ...
 type:
   - Conference
@@ -28,14 +29,16 @@ tags:
   - ...
 awards:
   - ...
-doi: https://dl.acm.org/doi/10.1145/3290605.3300877
-pdf: paper.pdf
-image: teaser.png
-video-thumb: "https://youtu.be/8bmEJSOBm_U"
-image-thumb: thumb.png
 
 video: "https://youtu.be/L6lUH0r-w-o"
 video-preview: "https://youtu.be/8bmEJSOBm_U"
+video-thumb: "https://youtu.be/8bmEJSOBm_U"
+
+image: teaser.png
+image-thumb: thumb.png
+
+pdf: paper.pdf
+doi: add full doi url
 
 external-urls: 
   - ...
@@ -61,11 +64,11 @@ Content of the project page in **HTML**. add all assets and files that are used 
 ## Mandatory fields
 - `publication-date: YYYY-MM-DD` the date of the publication (e.g. of the conference), this value is used for sorting
 - `title:` the paper title
-- `authors`
-- `pdf:` the paper for download
-- `image:` the banner-style teaser image that is shown on the project page, *min. 1200 px* wide
-- `venue:` full publication venue, as it will be shown on the website (e.g. "In Proceedings of CHI’19. Glasgow, UK, May 4 – 9, 2019.").
-- `video-thumb` and/or `image-thumb`. this thumbnail will be shown in the publications list. use the video-thumb (typically the 30s preview) whenever possible. the image-thumb should be *16:9, min. 560 x 315 px*.  
+- `authors`: all authors as a list
+- `pdf:` the filename of the paper for download, which is located in "/assets/publications/KEY/"
+- `image:` the filename of the banner-style teaser image that is shown on the project page, which is *min. 1200 px* wide, *max. 300 kB* and located in "/assets/publications/KEY/"
+- `venue:` full publication venue, as it will be shown on the website (e.g. "In Proceedings of ACM CHI’19. Glasgow, UK, May 4 – 9, 2019.").
+- `video-thumb` and/or `image-thumb`. this thumbnail will be shown in the publications list. use the video-thumb (typically the 30s preview) whenever possible. the image-thumb should be *16:9, min. 560 x 315 px* and *max. 60 kB*.  
 - `type: ` the type of the publication. below are the available types. if new ones are necessary, please add them to this README so others can use them as well.
   - Conference
   - Journal
@@ -82,12 +85,14 @@ Content of the project page in **HTML**. add all assets and files that are used 
 - `doi:` add the full link, e.g., https://dl.acm.org/doi/10.1145/3290605.3300877
 - `video:` the link to the submission video. upload to the lab YOUTUBE account, click share and paste that URL.  (example: "https://youtu.be/iy8CKbDlS5c")
 - `video-preview:` the link to the ~30 sec preview video. upload to the lab YOUTUBE account, click share and paste that URL.  (example: "https://youtu.be/iy8CKbDlS5c")
-- `page-subtitle:` you can put the 30 word contribution statement here for a 1-sentence summary.
+
 
 ### Optional
 - `page-title:` if the paper title is too long, you can optionally use this tag to set a different page title. the paper title in `title` will still be used for the publications list
+- `page-subtitle:` you can add the rest of the paper title as subtitle.
 
-### External links
+
+### External links (is applicable)
 The external links can be anything that points to more resources. The 3 lists are combined index-based. These can be **slides, talk recording, source code, deployed application, etc.**
 - `external-urls:` a list. e.g. URL_1, URL_2
 - `external-names:` the display names of the urls, e.g., "try our editor", "slides" 
@@ -104,4 +109,4 @@ THe example links would be: (1) [try our editor](URL_1) of the type "deploy", (2
 
 
 ## Please keep the images small for fast loading
-It's important that we keep download sizes small. Please use https://tinypng.com/ to reduce the file sizes af all images.
+It's important that we keep all file sizes *small*. Please use https://tinypng.com/ to reduce the file sizes af all images.

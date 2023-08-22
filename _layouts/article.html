@@ -13,9 +13,15 @@ layout: default
         {% if page.page-title %}
           {% assign title = page.page-title %}
         {% endif %}
+
         
         <h1 class="post-title">{{ title | escape }}</h1>
+
         <p>
+        {% if page.page-subtitle %}
+          <strong>{{ page.page-subtitle }}</strong> </br>
+        {% endif %}
+
           {{ page.authors | join: ", " | escape }}
         </p>
 
@@ -47,10 +53,6 @@ layout: default
   <div class="row">
     <!-- begin post -->
     <article class="post {{ no-image }} col col-8 col-t-10 col-m-12">
-
-      {% if page.page-subtitle %}
-        <p> <strong>{{ page.page-subtitle }}</strong> </p>
-      {% endif %}
 
       <div class="post__content">
         {{ content }}
