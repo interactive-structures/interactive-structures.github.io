@@ -61,29 +61,32 @@
 
 
           <div class="article__links">
-              <a class="link_button" 
-                 href="{% include article/get-assets-link.html content=article.pdf %}">
-                 <ion-icon name="{% include article/get-link-icons.html content='link-type-document' %}"></ion-icon>
-                 &nbsp;paper
-              </a>
-              {% if article.doi %}
-              <a class="link_button" href="{{article.doi}}">
-                <ion-icon name="{% include article/get-link-icons.html content='link-type-doi' %}"></ion-icon>
-                &nbsp;doi
-              </a>
-              {% endif %}
-
-              {% if article.video %}
-              <a class="link_button" href="{% include article/get-video-url.html link=article.video embed=false %}">
-                <ion-icon name="{% include article/get-link-icons.html content='link-type-video' %}"></ion-icon>
-                video
-              </a>
-              {% endif %}
+            {% if article.pdf %}  
+            <a class="link_button" 
+                href="{% include article/get-assets-link.html content=article.pdf %}">
+                <ion-icon name="{% include article/get-link-icons.html content='link-type-document' %}"></ion-icon>
+                &nbsp;paper
+            </a>
+            {% endif %}
             
-              <a href="{{ project-page }}" class="read-more">project&nbsp;page&nbsp;<i class="ion ion-ios-arrow-forward"></i></a>
-              <br>
+            {% if article.doi %}
+            <a class="link_button" href="{{article.doi}}">
+              <ion-icon name="{% include article/get-link-icons.html content='link-type-doi' %}"></ion-icon>
+              &nbsp;doi
+            </a>
+            {% endif %}
 
-              {% include article/add-external-links.html context=article %}
+            {% if article.video %}
+            <a class="link_button" href="{% include article/get-video-url.html link=article.video embed=false %}">
+              <ion-icon name="{% include article/get-link-icons.html content='link-type-video' %}"></ion-icon>
+              video
+            </a>
+            {% endif %}
+          
+            <a href="{{ project-page }}" class="read-more">project&nbsp;page&nbsp;<i class="ion ion-ios-arrow-forward"></i></a>
+            <br>
+
+            {% include article/add-external-links.html context=article %}
 
           </div>
 

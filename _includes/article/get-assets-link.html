@@ -2,17 +2,31 @@
 
 {%- assign thisurl = article.url -%}
 
+
 {%- comment -%}
-  assets link to: {{include.content}} -- 
-  page.url: {{page.url}} -- 
-  article.url: {{article.url}} -- 
-  thisurl: {{thisurl}} -- 
+  assets link to: {{include.content}} <br>
+  page.url: {{page.url}}<br>
+  article.url: {{article.url}}<br>
+  thisurl: {{thisurl}}<br>
 {%- endcomment -%}
 
-{%- assign output = input | prepend: thisurl | prepend: site.assetsurl | prepend: site.baseurl -%}
-{%- if input contains "http" -%}
+{%- if input contains "http" -%} 
   {%- assign output = input -%}
+{%- elsif thisurl -%} 
+  {%- assign output = input | prepend: thisurl | prepend: site.assetsurl | prepend: site.baseurl -%}
+{%- else -%} 
+  {%- assign output = input | prepend: page.url | prepend: site.assetsurl | prepend: site.baseurl -%}
 {%- endif -%} 
 
 {%- assign output = output | strip -%}
 {{ output }}
+
+
+
+
+{%- comment -%}
+Logic as follows: 
+ <!-- { if input contains "http" }  -> if link is absolute URL, just assign it as the output link -->
+ <!-- { elsif thisurl }             -> otherwise, if link is relative and the article url is given, prepend to create URL to correct assets folder -->
+ <!-- { else }                      -> otherwise, the link is relative and the article url is NOT given, meaning we are on the respective pubs page, prepend the page URL to create URL to correct assets folder -->
+{%- endcomment -%}
