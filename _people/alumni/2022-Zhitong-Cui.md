@@ -6,4 +6,5 @@ department: Zhejiang University
 email: zhitongcui@zju.edu.cn
 image: /people/2022-Zhitong-Cui.jpg
 year_start: 2022
+alumni_since: 2023
 ---
