@@ -82,6 +82,10 @@ p.tight {
   margin-bottom: 6px;
 }
 
+p.centered {
+  text-align: center;
+}
+
 .highlight_text {
   // background-color: lighten($brand-color, 20%);
   background-color: $brand-color;

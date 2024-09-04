@@ -1,7 +1,7 @@
 ---
-name: Yanzhen Zhang
-role: Undergraduate student
-position: Visiting Undergraduate Student (USC)
+name: Yanzhen Crystal Zhang
+role: Research assistant
+position: Visiting Student (USC)
 department: Architecture
 email: zhangcry@usc.edu
 website: 
