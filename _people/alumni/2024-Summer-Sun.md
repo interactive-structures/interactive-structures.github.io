@@ -7,4 +7,5 @@ email: summersun@cmu.edu
 website: http://summerdsun.squarespace.com/
 image: /people/2024-Summer-Sun.jpg
 year_start: 2024
+alumni_since: 2025
 ---

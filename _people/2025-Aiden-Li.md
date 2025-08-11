@@ -1,6 +1,6 @@
 ---
 name: Aiden Li
-role: Undergraduate student
+role: Collaborator
 position: Visiting Undergraduate Student (University College London)
 department: University College London
 email: yiliu.li@outlook.com

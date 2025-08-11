@@ -2,7 +2,7 @@
 name: Violet Han
 role: PhD student
 position: PhD student
-department: School of Architecture
+department: Human-Computer Interaction Institute
 email: yinuoh@andrew.cmu.edu
 website: https://violethan.com
 image: /people/2022-Violet-Han.jpg
