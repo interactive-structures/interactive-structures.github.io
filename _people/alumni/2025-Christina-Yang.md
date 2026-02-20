@@ -3,8 +3,7 @@ name: Christina Yang
 role: Masters student
 position: Masters Student
 department: Design
-email: yawenyan@andrew.cmu.edu
-website: 
+email: yawenyan@andrew.cmu.edu 
 image: /people/2025-Christina-Yang.png
 year_start: 2025
 alumni_since: 2025
