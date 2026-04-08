@@ -68,7 +68,7 @@ layout: default
         <p class="tight">
           {{ page.authors | join: ", " | escape }}. {{ page.publication-date | date: '%Y' }}. {{ page.title |escape }}. {{ page.venue | escape }}. 
           {% if page.doi %}
-            DOI: {{ page.doi }}
+            DOI: <a href="{{page.doi}}" target="_blank">{{ page.doi }}</a>
           {% endif %}
         </p>
 
@@ -93,17 +93,22 @@ layout: default
         </a>
         {% endif %} 
         {% if page.doi %}
-        <a class="link_button" href="{{page.doi}}">
+        <a class="link_button" href="{{page.doi}}" target="_blank">
           <ion-icon name="{% include article/get-link-icons.html content='link-type-doi' %}"></ion-icon>
           &nbsp;doi
         </a>
         {% endif %} 
-
+        {% if page.video %}
+        <a class="link_button" href="{% include article/get-video-url.html link=page.video embed=false %}" target="_blank">
+          <ion-icon name="{% include article/get-link-icons.html content='link-type-video' %}"></ion-icon>
+          video
+        </a>
+        {% endif %}
         
 
         <!-- Embed all external links, if applicable -->
         {% if page.external-urls.size > 0 %}
-        <a href="#materials">
+        <a href="#materials" target="_blank">
         <h2 id="materials">Links and materials</h2>
         </a>
 

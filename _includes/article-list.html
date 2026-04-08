@@ -70,14 +70,14 @@
             {% endif %}
             
             {% if article.doi %}
-            <a class="link_button" href="{{article.doi}}">
+            <a class="link_button" href="{{article.doi}}" target="_blank">
               <ion-icon name="{% include article/get-link-icons.html content='link-type-doi' %}"></ion-icon>
               &nbsp;doi
             </a>
             {% endif %}
 
             {% if article.video %}
-            <a class="link_button" href="{% include article/get-video-url.html link=article.video embed=false %}">
+            <a class="link_button" href="{% include article/get-video-url.html link=article.video embed=false %}" target="_blank">
               <ion-icon name="{% include article/get-link-icons.html content='link-type-video' %}"></ion-icon>
               video
             </a>
