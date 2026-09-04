@@ -7,4 +7,5 @@ email: oso@andrew.cmu.edu
 website: https://pejuotusajo.com/
 image: /people/2025-Olapeju-Otusajo.png
 year_start: 2025
+alumni_since: 2026
 ---

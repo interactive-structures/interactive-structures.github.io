@@ -7,4 +7,5 @@ email: jtgonzal@cs.cmu.edu
 website: https://gonzalez.ink
 image: /people/2021-Jesse-Gonzalez.jpg
 year_start: 2021
+alumni_since: 2025
 ---
